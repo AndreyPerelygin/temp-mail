@@ -95,3 +95,15 @@ class TempMail(object):
             self.api_domain, email_hash)
         req = requests.get(url)
         return req.json()
+
+    def delete_mail(self, mail_unique_id=None):
+        """
+        Delete mail by unique mail id
+        :param mail_unique_id: mail hash id.
+        """
+        if mail_unique_id not is None:
+
+            url = 'http://{0}/request/mail/id/{1}/format/json/'.format(
+                self.api_domain, mail_unique_id)
+            req = requests.get(url)
+        return req.json()
