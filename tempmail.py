@@ -99,7 +99,7 @@ class TempMail(object):
     def delete_mail(self, mail_id=None):
         """
         Delete mail by unique mail id
-        :param mail_unique_id: mail hash id
+        :param mail_id: mail hash id
         """
         if not mail_id is None:
             url = 'http://{0}/request/delete/id/{1}/'.format(
