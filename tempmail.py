@@ -105,4 +105,6 @@ class TempMail(object):
             url = 'http://{0}/request/delete/id/{1}/'.format(
                 self.api_domain, mail_id)
             req = requests.get(url)
-        return req.json()
+            return True
+        else:
+            return False
