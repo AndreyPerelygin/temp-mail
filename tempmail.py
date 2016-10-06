@@ -101,8 +101,7 @@ class TempMail(object):
         Delete mail by unique mail id
         :param mail_unique_id: mail hash id.
         """
-        if mail_unique_id not is None:
-
+        if not mail_unique_id is None:
             url = 'http://{0}/request/mail/id/{1}/format/json/'.format(
                 self.api_domain, mail_unique_id)
             req = requests.get(url)
