@@ -98,7 +98,7 @@ class TempMail(object):
 
     def delete_mail(self, mail_id=None):
         """
-        Delete mail by unique mail id
+        Delete mail by mail id
         :param mail_id: mail hash id
         """
         if not mail_id is None:
